@@ -16,12 +16,21 @@ const customTheme = {
         300: '#4CA1FF',
         200: '#4CA1FF',
         100: '#4CA1FF'
-      }
+      },
+      heading: '#6F6C6C19'
     }
   },
   fonts: {
     ...theme.fonts,
     heading: 'Avenir'
+  },
+  fontSizes: {
+    ...theme.fontSizes,
+    heading: '9rem'
+  },
+  space: {
+    ...theme.space,
+    '14': '3.5rem'
   }
 }
 

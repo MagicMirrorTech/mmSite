@@ -27,16 +27,17 @@ const activeStyle = {
   color: theme.colors.mm.orange
 }
 
+const imageContent = {
+  src: '/assets/MagicMirrorDevs_logo.png',
+  width: 70
+}
+
 function Navbar() {
   return (
     <Nav>
       <div>
         <NavLink exact to="/">
-          <img
-            src="/assets/MagicMirrorDevs_logo.png"
-            width="70"
-            alt="mm_logo"
-          />
+          <img {...imageContent} alt="mm_logo" />
         </NavLink>
       </div>
       <Links>
