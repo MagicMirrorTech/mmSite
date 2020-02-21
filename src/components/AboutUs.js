@@ -4,6 +4,7 @@ import { Heading, Text, Stack, Box, Button } from '@chakra-ui/core'
 function AboutUs() {
   return (
     <Box
+      mt="12vh"
       w="100%"
       h="78vh"
       display="flex"
@@ -31,16 +32,16 @@ function AboutUs() {
           CREATE VALUE
         </Button>
       </Stack>
-
-      <Text
+      <Heading
+        as="h2"
         ml={-40}
-        mt={14}
+        mt={20}
         fontWeight="semibold"
         fontSize="heading"
         color="mm.heading"
       >
         ABOUT US
-      </Text>
+      </Heading>
     </Box>
   )
 }

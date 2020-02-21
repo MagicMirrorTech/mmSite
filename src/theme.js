@@ -26,10 +26,12 @@ const customTheme = {
   },
   fontSizes: {
     ...theme.fontSizes,
-    heading: '9rem'
+    heading: '9rem',
+    hmd: '5rem'
   },
   space: {
     ...theme.space,
+    '7': '1.7rem',
     '14': '3.5rem'
   }
 }

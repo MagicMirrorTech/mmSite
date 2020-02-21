@@ -4,6 +4,9 @@ import theme from '../theme'
 import styled from 'styled-components'
 
 const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  z-index: 99;
   width: 100vw;
   height: 12vh;
   background: white;
