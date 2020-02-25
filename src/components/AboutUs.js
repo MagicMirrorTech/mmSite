@@ -32,7 +32,8 @@ function AboutUs({ onOpen }) {
           boxShadow="sm"
           _hover={{ boxShadow: 'md' }}
           _active={{ boxShadow: 'lg' }}
-          variantColor="mm.blue"
+          backgroundColor="mmblue.500"
+          variantColor="mmblue"
           size="lg"
           w="40%"
           h="54px"
@@ -48,7 +49,7 @@ function AboutUs({ onOpen }) {
         mt="100px"
         fontWeight="semibold"
         fontSize="heading"
-        color="mm.heading"
+        color="mmheading"
       >
         ABOUT US
       </Heading>

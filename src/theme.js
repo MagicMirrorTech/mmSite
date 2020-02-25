@@ -4,32 +4,30 @@ const customTheme = {
   ...theme,
   colors: {
     ...theme.colors,
-    mm: {
-      orange: '#FF914C',
-      blue: {
-        900: '#4CA1FF',
-        800: '#4CA1FF',
-        700: '#4CA1FF',
-        600: '#4CA1FF',
-        500: '#4CA1FF',
-        400: '#4CA1FF',
-        300: '#4CA1FF',
-        200: '#4CA1FF',
-        100: '#4CA1FF'
-      },
-      gray: {
-        900: '#D6D6D6',
-        800: '#D6D6D6',
-        700: '#D6D6D6',
-        600: '#D6D6D6',
-        500: '#D6D6D6',
-        400: '#D6D6D6',
-        300: '#D6D6D6',
-        200: '#D6D6D6',
-        100: '#D6D6D6'
-      },
-      heading: '#6F6C6C19'
-    }
+    mmblue: {
+      '900': '#4CA1FF',
+      '800': '#4CA1FF',
+      '700': '#4CA1FF',
+      '600': '#4CA1FF',
+      '500': '#4CA1FF',
+      '400': '#4CA1FF',
+      '300': '#4CA1FF',
+      '200': '#4CA1FF',
+      '100': '#4CA1FF'
+    },
+    mmorange: '#FF914C',
+    mmgray: {
+      '900': '#D6D6D6',
+      '800': '#D6D6D6',
+      '700': '#D6D6D6',
+      '600': '#D6D6D6',
+      '500': '#D6D6D6',
+      '400': '#D6D6D6',
+      '300': '#D6D6D6',
+      '200': '#D6D6D6',
+      '100': '#D6D6D6'
+    },
+    mmheading: '#6F6C6C19'
   },
   fonts: {
     ...theme.fonts,

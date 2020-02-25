@@ -23,7 +23,7 @@ function OurWork() {
         >
           OUR WORK
         </Heading>
-        <Heading as="h3" color="mm.blue.500">
+        <Heading as="h3" color="mmblue.500">
           HOW WE GET RESULTS
         </Heading>
         <Text textAlign="justify">

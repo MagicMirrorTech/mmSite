@@ -17,7 +17,8 @@ import {
   Flex
 } from '@chakra-ui/core'
 
-export default function CreateValueModal({ isOpen, onClose }) {
+export default function CreateValueModal(props) {
+  const { isOpen, onClose, name, message, email, submit } = props
   return (
     <Modal
       blockScrollOnMount={false}
@@ -36,7 +37,7 @@ export default function CreateValueModal({ isOpen, onClose }) {
             textAlign="center"
             fontWeight="bold"
             fontSize="1.5rem"
-            color="mm.blue.500"
+            color="mmblue.500"
           >
             CREATE VALUE!
           </Text>
@@ -47,25 +48,28 @@ export default function CreateValueModal({ isOpen, onClose }) {
             <FormControl>
               <FormLabel htmlFor="name">NAME (optional)</FormLabel>
               <Input
+                {...name}
                 type="text"
                 id="name"
                 placeholder="Write your name here"
-                focusBorderColor="mm.blue.500"
+                focusBorderColor="mmblue.500"
               />
             </FormControl>
             <FormControl>
               <FormLabel htmlFor="email">EMAIL</FormLabel>
               <Input
+                {...email}
                 type="email"
                 id="email"
                 placeholder="Write your email here"
-                focusBorderColor="mm.blue.500"
+                focusBorderColor="mmblue.500"
               />
             </FormControl>
             <FormControl>
               <FormLabel htmlFor="message">MESSAGE</FormLabel>
               <Textarea
-                focusBorderColor="mm.blue.500"
+                {...message}
+                focusBorderColor="mmblue.500"
                 placeholder="Write your message here"
                 size="lg"
                 resize="none"
@@ -76,10 +80,22 @@ export default function CreateValueModal({ isOpen, onClose }) {
 
         <ModalFooter>
           <Flex mb={3} w="100%" align="center" justify="space-between">
-            <Button w="40%" size="lg" variantColor="mm.gray" onClick={onClose}>
+            <Button
+              w="40%"
+              size="lg"
+              variantColor="mmgray"
+              backgroundColor="mmgray.500"
+              onClick={onClose}
+            >
               CANCEL
             </Button>
-            <Button w="40%" size="lg" variantColor="mm.blue">
+            <Button
+              w="40%"
+              size="lg"
+              variantColor="mmblue"
+              backgroundColor="mmblue.500"
+              onClick={submit}
+            >
               SEND
             </Button>
           </Flex>

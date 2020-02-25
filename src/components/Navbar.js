@@ -28,7 +28,7 @@ const Links = styled.div`
 `
 
 const activeStyle = {
-  color: theme.colors.mm.orange
+  color: theme.colors.mmorange
 }
 
 const imageContent = {
