@@ -8,18 +8,19 @@ const Nav = styled.nav`
   top: 0;
   z-index: 99;
   width: 100vw;
-  height: 12vh;
+  height: 15vh;
   background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 70px;
+  padding: 0 100px;
   box-sizing: border-box;
 `
 
 const Links = styled.div`
   & * {
-    margin-left: 150px;
+    font-size: 20px;
+    margin-left: 100px;
   }
   & span:hover {
     cursor: pointer;
@@ -32,7 +33,7 @@ const activeStyle = {
 
 const imageContent = {
   src: '/assets/MagicMirrorDevs_logo.png',
-  width: 70
+  width: 80
 }
 
 function Navbar() {

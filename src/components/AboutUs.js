@@ -1,7 +1,7 @@
 import React from 'react'
 import { Heading, Text, Stack, Box, Button } from '@chakra-ui/core'
 
-function AboutUs() {
+function AboutUs({ onOpen }) {
   return (
     <Box
       mt="12vh"
@@ -10,32 +10,42 @@ function AboutUs() {
       display="flex"
       boxSizing="border-box"
       px={24}
-      py={20}
+      py={16}
       bgImage="url('/assets/about_us.png')"
       bgSize="cover"
       bgRepeat="no-repeat"
     >
-      <Stack w="50%" spacing={8}>
-        <Heading as="h1" w="80%" fontSize="2.5rem">
+      <Stack w="55%" spacing={8}>
+        <Heading as="h1" fontSize="3rem" letterSpacing="1px">
           <span style={{ fontWeight: 'lighter' }}>May the odds </span>
           be ever in your favor
         </Heading>
-        <Text fontSize="lg">
+        <Text fontSize="xl">
           Magic Mirror is here to put the odds in your favor. Long gone are the
           days where competing against big companies felt like a losing battle.
         </Text>
-        <Text fontSize="lg">
+        <Text fontSize="xl">
           We are a group of highly efficient nerds, bridging the gap between
           fancy new technology and real revenue gains they promise.
         </Text>
-        <Button variantColor="mm.blue" size="lg" w="40%">
+        <Button
+          boxShadow="sm"
+          _hover={{ boxShadow: 'md' }}
+          _active={{ boxShadow: 'lg' }}
+          variantColor="mm.blue"
+          size="lg"
+          w="40%"
+          h="54px"
+          onClick={onOpen}
+        >
           CREATE VALUE
         </Button>
       </Stack>
       <Heading
         as="h2"
-        ml={-40}
-        mt={20}
+        pos="absolute"
+        ml="450px"
+        mt="100px"
         fontWeight="semibold"
         fontSize="heading"
         color="mm.heading"

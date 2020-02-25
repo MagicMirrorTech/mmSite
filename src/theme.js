@@ -17,12 +17,24 @@ const customTheme = {
         200: '#4CA1FF',
         100: '#4CA1FF'
       },
+      gray: {
+        900: '#D6D6D6',
+        800: '#D6D6D6',
+        700: '#D6D6D6',
+        600: '#D6D6D6',
+        500: '#D6D6D6',
+        400: '#D6D6D6',
+        300: '#D6D6D6',
+        200: '#D6D6D6',
+        100: '#D6D6D6'
+      },
       heading: '#6F6C6C19'
     }
   },
   fonts: {
     ...theme.fonts,
-    heading: 'Avenir'
+    heading: 'Avenir',
+    body: 'Avenir'
   },
   fontSizes: {
     ...theme.fontSizes,
