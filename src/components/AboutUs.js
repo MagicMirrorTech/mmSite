@@ -4,9 +4,8 @@ import { Heading, Text, Stack, Box, Button } from '@chakra-ui/core'
 function AboutUs({ onOpen }) {
   return (
     <Box
-      mt="12vh"
       w="100%"
-      h="78vh"
+      h="80vh"
       display="flex"
       boxSizing="border-box"
       px={24}

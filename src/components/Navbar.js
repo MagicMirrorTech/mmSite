@@ -4,16 +4,13 @@ import theme from '../theme'
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-  position: fixed;
-  top: 0;
-  z-index: 99;
   width: 100vw;
-  height: 15vh;
+  height: 10vh;
   background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 100px;
+  padding: 50px 100px;
   box-sizing: border-box;
 `
 

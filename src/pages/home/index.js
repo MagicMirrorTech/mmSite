@@ -4,6 +4,7 @@ import OurWork from '../../components/OurWork'
 import CreateValueModal from '../../components/CreateValueModal'
 import { Box, useDisclosure } from '@chakra-ui/core'
 import { useInput } from '../../hooks/useInput'
+import OurInspiration from '../../components/OurInspiration'
 
 function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -23,6 +24,7 @@ function Home() {
     <Box boxSizing="border-box" p={8}>
       <AboutUs onOpen={onOpen} />
       <OurWork />
+      <OurInspiration />
       <CreateValueModal
         name={name}
         email={email}
