@@ -45,9 +45,13 @@ function Navbar() {
         <NavLink exact activeStyle={activeStyle} to="/">
           Home
         </NavLink>
-        <NavLink exact activeStyle={activeStyle} to="/blog">
+        <a
+          href="https://mmdevsblog.netlify.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Blog
-        </NavLink>
+        </a>
         <span>Contact us</span>
       </Links>
     </Nav>

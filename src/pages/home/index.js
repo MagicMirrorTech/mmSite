@@ -2,9 +2,11 @@ import React from 'react'
 import AboutUs from '../../components/AboutUs'
 import OurWork from '../../components/OurWork'
 import CreateValueModal from '../../components/CreateValueModal'
+import OurInspiration from '../../components/OurInspiration'
+import Services from '../../components/Services'
+
 import { Box, useDisclosure } from '@chakra-ui/core'
 import { useInput } from '../../hooks/useInput'
-import OurInspiration from '../../components/OurInspiration'
 
 function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -25,6 +27,7 @@ function Home() {
       <AboutUs onOpen={onOpen} />
       <OurWork />
       <OurInspiration />
+      <Services />
       <CreateValueModal
         name={name}
         email={email}
