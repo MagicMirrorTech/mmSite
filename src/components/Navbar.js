@@ -1,7 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import theme from '../theme'
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 const Nav = styled.nav`
   width: 100vw;
