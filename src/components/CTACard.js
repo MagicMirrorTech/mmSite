@@ -34,6 +34,7 @@ export default function CTACard({ text1, text2, btnText, btnBg, btnVar }) {
         alignSelf="center"
         size="lg"
         w="23%"
+        h="4rem"
         backgroundColor={btnBg}
         variantColor={btnVar}
       >

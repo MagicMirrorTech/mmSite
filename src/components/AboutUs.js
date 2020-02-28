@@ -20,12 +20,12 @@ function AboutUs({ onOpen }) {
           be ever in your favor
         </Heading>
         <Text fontSize="xl">
-          Magic Mirror is here to put the odds in your favor. Long gone are the
-          days where competing against big companies felt like a losing battle.
+          Magic Mirror is here to put the odds in your favor. Long gone are the days where competing
+          against big companies felt like a losing battle.
         </Text>
         <Text fontSize="xl">
-          We are a group of highly efficient nerds, bridging the gap between
-          fancy new technology and real revenue gains they promise.
+          We are a group of highly efficient nerds, bridging the gap between fancy new technology
+          and real revenue gains they promise.
         </Text>
         <Button
           boxShadow="sm"
@@ -35,7 +35,7 @@ function AboutUs({ onOpen }) {
           variantColor="mmblue"
           size="lg"
           w="40%"
-          h="54px"
+          h="4rem"
           onClick={onOpen}
         >
           CREATE VALUE

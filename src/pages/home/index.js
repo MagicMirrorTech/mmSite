@@ -11,6 +11,7 @@ import { useInput } from '../../hooks/useInput'
 import { Context } from '../../context'
 import Customers from '../../components/Customers'
 import Partners from '../../components/Partners'
+import OurBlog from '../../components/OurBlog'
 
 function Home() {
   const { onOpen, onClose, isOpen } = useContext(Context)
@@ -41,6 +42,7 @@ function Home() {
       />
       <Customers />
       <Partners />
+      <OurBlog />
 
       <CreateValueModal
         name={name}
