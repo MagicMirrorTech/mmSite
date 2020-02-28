@@ -44,10 +44,9 @@ export default function ContactUs() {
         <Stack isInline>
           <Link social="facebook" href="https://www.facebook.com/mmdevs" />
           <Link social="instagram" href="https://www.instagram.com/mm.devs" />
-          {/* TODO */}
-          <Link social="linkedin" href="" />
-          <Link social="twitter" href="" />
-          <Link social="pinterest" href="" />
+          <Link social="linkedin" href="https://www.linkedin.com/company/magic-mirror-devs" />
+          <Link social="twitter" href="https://twitter.com/MagicmirrorD" />
+          <Link social="pinterest" href="https://www.pinterest.com.mx/MagicMirror_dev" />
         </Stack>
       </Stack>
     </Flex>
