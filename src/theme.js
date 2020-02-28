@@ -27,7 +27,18 @@ const customTheme = {
       '200': '#D6D6D6',
       '100': '#D6D6D6'
     },
-    mmheading: '#6F6C6C19'
+    mmheading: '#6F6C6C19',
+    mmyellow: {
+      '900': '#FFEA4C',
+      '800': '#FFEA4C',
+      '700': '#FFEA4C',
+      '600': '#FFEA4C',
+      '500': '#FFEA4C',
+      '400': '#FFEA4C',
+      '300': '#FFEA4C',
+      '200': '#FFEA4C',
+      '100': '#FFEA4C'
+    }
   },
   fonts: {
     ...theme.fonts,

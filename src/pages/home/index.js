@@ -12,6 +12,8 @@ import { Context } from '../../context'
 import Customers from '../../components/Customers'
 import Partners from '../../components/Partners'
 import OurBlog from '../../components/OurBlog'
+import ContactUs from '../../components/ContactUs'
+import Footer from '../../components/Footer'
 
 function Home() {
   const { onOpen, onClose, isOpen } = useContext(Context)
@@ -28,7 +30,7 @@ function Home() {
   }
 
   return (
-    <Box boxSizing="border-box" p={8}>
+    <Box boxSizing="border-box">
       <AboutUs onOpen={onOpen} />
       <OurWork />
       <OurInspiration />
@@ -43,6 +45,15 @@ function Home() {
       <Customers />
       <Partners />
       <OurBlog />
+      <CTACard
+        text1="LET'S GET STARTED"
+        text2="DIGITALIZE YOUR BUSINESS NOW"
+        btnText="CREATE VALUE"
+        btnBg="mmyellow.500"
+        btnVar="mmyellow"
+      />
+      <ContactUs />
+      <Footer />
 
       <CreateValueModal
         name={name}

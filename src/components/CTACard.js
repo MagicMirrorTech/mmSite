@@ -7,8 +7,8 @@ export default function CTACard({ text1, text2, btnText, btnBg, btnVar }) {
   return (
     <Stack
       w="100%"
-      minH="30vh"
-      p="100px"
+      px="100px"
+      py="70px"
       spacing="100px"
       boxSizing="border-box"
       direction="column"
@@ -33,10 +33,11 @@ export default function CTACard({ text1, text2, btnText, btnBg, btnVar }) {
         onClick={onOpen}
         alignSelf="center"
         size="lg"
-        w="23%"
+        w="25%"
         h="4rem"
         backgroundColor={btnBg}
         variantColor={btnVar}
+        color={btnBg === 'mmyellow.500' ? 'black' : 'white'}
       >
         {btnText}
       </Button>
