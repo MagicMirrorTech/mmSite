@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import AboutUs from '../../components/AboutUs'
 import OurWork from '../../components/OurWork'
 import CreateValueModal from '../../components/CreateValueModal'
 import OurInspiration from '../../components/OurInspiration'
 import Services from '../../components/Services'
+import CTACard from '../../components/CTACard'
 
-import { Box, useDisclosure } from '@chakra-ui/core'
+import { Box } from '@chakra-ui/core'
 import { useInput } from '../../hooks/useInput'
+import { Context } from '../../context'
 
 function Home() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { onOpen, onClose, isOpen } = useContext(Context)
   const name = useInput('')
   const email = useInput('')
   const message = useInput('')
@@ -28,6 +30,14 @@ function Home() {
       <OurWork />
       <OurInspiration />
       <Services />
+      <CTACard
+        text1="GET THE GAINS!"
+        text2="EMPOWER YOUR BUSINESS AND START GROWING IT TODAY!"
+        btnText="CREATE VALUE"
+        btnBg="mmblue.500"
+        btnVar="mmblue"
+      />
+
       <CreateValueModal
         name={name}
         email={email}

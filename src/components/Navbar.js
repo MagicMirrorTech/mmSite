@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import theme from '../theme'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import { Context } from '../context'
 
 const Nav = styled.nav`
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   background: white;
   display: flex;
@@ -34,6 +35,8 @@ const imageContent = {
 }
 
 function Navbar() {
+  const { onOpen } = useContext(Context)
+
   return (
     <Nav>
       <div>
@@ -45,14 +48,10 @@ function Navbar() {
         <NavLink exact activeStyle={activeStyle} to="/">
           Home
         </NavLink>
-        <a
-          href="https://mmdevsblog.netlify.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <a href="https://mmdevsblog.netlify.com" rel="noopener noreferrer" target="_blank">
           Blog
         </a>
-        <span>Contact us</span>
+        <span onClick={onOpen}>Contact us</span>
       </Links>
     </Nav>
   )
