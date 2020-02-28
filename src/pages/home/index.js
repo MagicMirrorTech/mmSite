@@ -10,6 +10,7 @@ import { Box } from '@chakra-ui/core'
 import { useInput } from '../../hooks/useInput'
 import { Context } from '../../context'
 import Customers from '../../components/Customers'
+import Partners from '../../components/Partners'
 
 function Home() {
   const { onOpen, onClose, isOpen } = useContext(Context)
@@ -39,6 +40,7 @@ function Home() {
         btnVar="mmblue"
       />
       <Customers />
+      <Partners />
 
       <CreateValueModal
         name={name}
