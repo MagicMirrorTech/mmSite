@@ -15,7 +15,7 @@ function AboutUs({ onOpen }) {
       bgRepeat="no-repeat"
     >
       <Stack w="55%" spacing={8}>
-        <Heading as="h1" fontSize="3rem" letterSpacing="1px">
+        <Heading as="h1" fontSize="3rem" letterSpacing="2px">
           <span style={{ fontWeight: 'lighter' }}>May the odds </span>
           be ever in your favor
         </Heading>
