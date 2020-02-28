@@ -9,6 +9,7 @@ import CTACard from '../../components/CTACard'
 import { Box } from '@chakra-ui/core'
 import { useInput } from '../../hooks/useInput'
 import { Context } from '../../context'
+import Customers from '../../components/Customers'
 
 function Home() {
   const { onOpen, onClose, isOpen } = useContext(Context)
@@ -37,6 +38,7 @@ function Home() {
         btnBg="mmblue.500"
         btnVar="mmblue"
       />
+      <Customers />
 
       <CreateValueModal
         name={name}
