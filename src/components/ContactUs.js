@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, Stack, Text, Heading, Box } from '@chakra-ui/core'
 
-export default function ContactUs() {
+export default function ContactUs({ onOpen }) {
   return (
     <Flex w="100%" justify="center" align="center" py={20} px={10}>
       <Heading
@@ -14,7 +14,15 @@ export default function ContactUs() {
       >
         SAY HI!
       </Heading>
-      <Stack display="flex" align="flex-start" justify="center" spacing={5} p={5} w="20%" h="100px">
+      <Stack
+        display="flex"
+        align="flex-start"
+        justify="center"
+        spacing={5}
+        p={5}
+        w="20%"
+        h="100px"
+      >
         <Heading fontSize="1.9rem" as="h3" color="mmblue.500">
           CONTACT US!
         </Heading>
@@ -23,7 +31,9 @@ export default function ContactUs() {
         <Text color="mmorange" fontSize="1.3rem" fontWeight="bold">
           KNOW OUR MISSION
         </Text>
-        <Text fontSize="1.3rem">Click here!</Text>
+        <Text zIndex="99" fontSize="1.3rem" onClick={onOpen} cursor="pointer">
+          Click here!
+        </Text>
       </Stack>
       <Stack spacing={5} p={5} w="20%" h="100px">
         <Text color="mmorange" fontSize="1.3rem" fontWeight="bold">
@@ -44,9 +54,15 @@ export default function ContactUs() {
         <Stack isInline>
           <Link social="facebook" href="https://www.facebook.com/mmdevs" />
           <Link social="instagram" href="https://www.instagram.com/mm.devs" />
-          <Link social="linkedin" href="https://www.linkedin.com/company/magic-mirror-devs" />
+          <Link
+            social="linkedin"
+            href="https://www.linkedin.com/company/magic-mirror-devs"
+          />
           <Link social="twitter" href="https://twitter.com/MagicmirrorD" />
-          <Link social="pinterest" href="https://www.pinterest.com.mx/MagicMirror_dev" />
+          <Link
+            social="pinterest"
+            href="https://www.pinterest.com.mx/MagicMirror_dev"
+          />
         </Stack>
       </Stack>
     </Flex>

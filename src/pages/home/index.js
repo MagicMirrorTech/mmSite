@@ -1,22 +1,26 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import AboutUs from '../../components/AboutUs'
 import OurWork from '../../components/OurWork'
 import CreateValueModal from '../../components/CreateValueModal'
 import OurInspiration from '../../components/OurInspiration'
 import Services from '../../components/Services'
 import CTACard from '../../components/CTACard'
-
-import { Box } from '@chakra-ui/core'
-import { useInput } from '../../hooks/useInput'
-import { Context } from '../../context'
 import Customers from '../../components/Customers'
 import Partners from '../../components/Partners'
 import OurBlog from '../../components/OurBlog'
 import ContactUs from '../../components/ContactUs'
 import Footer from '../../components/Footer'
 
+import { Box } from '@chakra-ui/core'
+import { useInput } from '../../hooks/useInput'
+import { Context } from '../../context'
+import OurMissionModal from '../../components/OurMissionModal'
+
 function Home() {
-  const { onOpen, onClose, isOpen } = useContext(Context)
+  useEffect(() => {
+    document.title = 'MM | Home'
+  })
+  const { onOpen, onClose, isOpen, modal, toggleModal } = useContext(Context)
   const name = useInput('')
   const email = useInput('')
   const message = useInput('')
@@ -52,7 +56,7 @@ function Home() {
         btnBg="mmyellow.500"
         btnVar="mmyellow"
       />
-      <ContactUs />
+      <ContactUs onOpen={toggleModal} />
       <Footer />
 
       <CreateValueModal
@@ -63,6 +67,7 @@ function Home() {
         isOpen={isOpen}
         submit={submit}
       />
+      <OurMissionModal onClose={toggleModal} isOpen={modal} />
     </Box>
   )
 }
