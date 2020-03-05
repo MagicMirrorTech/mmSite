@@ -24,10 +24,10 @@ export default function Footer() {
     >
       <img {...imageContent} alt="mm_logo" />
       <Text fontSize="lg">© 2020. Magic Mirror Devs. All rights reserved</Text>
-      <Link exact to="/legal">
+      <Link to="/legal">
         <Text fontSize="lg">LEGAL NOTICE</Text>
       </Link>
-      <Link exact to="/privacy">
+      <Link to="/privacy">
         <Text fontSize="lg">PRIVACY POLICY</Text>
       </Link>
     </Flex>

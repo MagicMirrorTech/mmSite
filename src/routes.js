@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/home'
 import Legal from './pages/legal'
+import Privacy from './pages/privacy'
 import ContextProvider from './context'
 
 export default () => (
@@ -10,6 +11,7 @@ export default () => (
     <ContextProvider>
       <Navbar />
       <Switch>
+        <Route exact path="/privacy" component={Privacy} />
         <Route exact path="/legal" component={Legal} />
         <Route exact path="/" component={Home} />
       </Switch>
