@@ -10,13 +10,14 @@ import Partners from '../../components/Partners'
 import OurBlog from '../../components/OurBlog'
 import ContactUs from '../../components/ContactUs'
 import Footer from '../../components/Footer'
-
-import { Box } from '@chakra-ui/core'
-import { useInput } from '../../hooks/useInput'
-import { Context } from '../../context'
 import OurMissionModal from '../../components/OurMissionModal'
+import { Box } from '@chakra-ui/core'
+import { Context } from '../../context'
+import useInput from '../../hooks/useInput'
+import useScroll from '../../hooks/useScroll'
 
 function Home() {
+  useScroll()
   useEffect(() => {
     document.title = 'MM | Home'
   })
