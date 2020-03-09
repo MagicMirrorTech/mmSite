@@ -20,6 +20,16 @@ const mockData = [
 ]
 
 export default function Customers() {
+  const scrollCarousel = delta => {
+    const carousel = document.querySelector('#carousel')
+    const width = carousel.offsetWidth
+    carousel.scroll({
+      left: width * delta,
+      top: 0,
+      smooth: true
+    })
+  }
+
   return (
     <Stack px="90px" py="150px" spacing={20} textAlign="center">
       <Heading
@@ -34,8 +44,17 @@ export default function Customers() {
       >
         HAPPY CUSTOMERS
       </Heading>
-      <Heading color="mmblue.500">THIS IS WHAT OUR CUSTOMERS SAY ABOUT US</Heading>
-      <Stack mt="100px" overflowX="hidden" spacing={10} isInline>
+      <Heading color="mmblue.500">
+        THIS IS WHAT OUR CUSTOMERS SAY ABOUT US
+      </Heading>
+      <Stack
+        style={{ scrollBehavior: 'smooth' }}
+        id="carousel"
+        mt="100px"
+        overflowX="hidden"
+        spacing={10}
+        isInline
+      >
         {mockData.map(article => (
           <Flex
             key={article.id}
@@ -54,7 +73,14 @@ export default function Customers() {
         ))}
       </Stack>
       <Stack isInline alignSelf="center" spacing={20}>
-        <Button variant="outline" borderRadius="50px" w="50px" h="50px" variantColor="mmblue">
+        <Button
+          onClick={() => scrollCarousel(-1)}
+          variant="outline"
+          borderRadius="50px"
+          w="50px"
+          h="50px"
+          variantColor="mmblue"
+        >
           <Icon
             name="chevron-left"
             size="50px"
@@ -64,7 +90,14 @@ export default function Customers() {
           />
         </Button>
 
-        <Button variant="outline" borderRadius="50px" w="50px" h="50px" variantColor="mmblue">
+        <Button
+          onClick={() => scrollCarousel(1)}
+          variant="outline"
+          borderRadius="50px"
+          w="50px"
+          h="50px"
+          variantColor="mmblue"
+        >
           <Icon
             name="chevron-right"
             size="50px"
