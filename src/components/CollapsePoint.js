@@ -15,6 +15,7 @@ export default function CollapsePoint({
           {title.toUpperCase()}
         </Text>
         <Icon
+          cursor="pointer"
           zIndex="99"
           onClick={e => handleShow(name)}
           name="chevron-down"

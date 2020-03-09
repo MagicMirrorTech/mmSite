@@ -7,7 +7,7 @@ export default function useScroll() {
   useEffect(() => {
     const title = `MM | ${pathname
       .replace('/', '')
-      .replace(/^\w/, c => c.toUpperCase())}`
+      .replace(/^\w/, c => c.toUpperCase()) || 'Home'}`
     document.title = title
     window.scrollTo(0, 0)
   }, [pathname])
