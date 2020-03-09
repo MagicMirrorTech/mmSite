@@ -4,11 +4,14 @@ import Routes from './routes'
 import { ThemeProvider, CSSReset } from '@chakra-ui/core'
 import theme from './theme'
 import * as serviceWorker from './serviceWorker'
+import ContextProvider from './context'
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <CSSReset />
-    <Routes />
+    <ContextProvider>
+      <CSSReset />
+      <Routes />
+    </ContextProvider>
   </ThemeProvider>,
   document.getElementById('root')
 )

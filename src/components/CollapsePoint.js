@@ -16,7 +16,7 @@ export default function CollapsePoint({
         </Text>
         <Icon
           zIndex="99"
-          onClick={() => handleShow(name)}
+          onClick={e => handleShow(name)}
           name="chevron-down"
           size="40px"
         />

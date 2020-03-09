@@ -11,13 +11,14 @@ export default function KnowMore() {
   const [state, setState] = useState(mapState)
 
   const showCollapse = name => {
-    const newArr = state.filter(elem => {
-      if (Object.keys(elem)[0] === name) {
-        elem = !elem
-        return elem
-      }
+    setState(prevState => {
+      const newArr = prevState.map(elem => {
+        const key = Number(Object.keys(elem)[0])
+        if (key === name) return { [name]: !elem[name] }
+        else return elem
+      })
+      return newArr
     })
-    setState(newArr)
   }
 
   return (

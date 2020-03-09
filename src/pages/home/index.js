@@ -1,7 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import AboutUs from '../../components/AboutUs'
 import OurWork from '../../components/OurWork'
-import CreateValueModal from '../../components/CreateValueModal'
 import OurInspiration from '../../components/OurInspiration'
 import Services from '../../components/Services'
 import CTACard from '../../components/CTACard'
@@ -10,29 +9,14 @@ import Partners from '../../components/Partners'
 import OurBlog from '../../components/OurBlog'
 import ContactUs from '../../components/ContactUs'
 import Footer from '../../components/Footer'
-import OurMissionModal from '../../components/OurMissionModal'
 import { Box } from '@chakra-ui/core'
 import { Context } from '../../context'
-import useInput from '../../hooks/useInput'
 import useScroll from '../../hooks/useScroll'
 
 function Home() {
   useScroll()
-  useEffect(() => {
-    document.title = 'MM | Home'
-  })
-  const { onOpen, onClose, isOpen, modal, toggleModal } = useContext(Context)
-  const name = useInput('')
-  const email = useInput('')
-  const message = useInput('')
 
-  const submit = () => {
-    // values ready for submit to the server in [key].value
-    name.clean()
-    email.clean()
-    message.clean()
-    onClose()
-  }
+  const { onOpen, toggleModal } = useContext(Context)
 
   return (
     <Box boxSizing="border-box">
@@ -59,16 +43,6 @@ function Home() {
       />
       <ContactUs onOpen={toggleModal} />
       <Footer />
-
-      <CreateValueModal
-        name={name}
-        email={email}
-        message={message}
-        onClose={onClose}
-        isOpen={isOpen}
-        submit={submit}
-      />
-      <OurMissionModal onClose={toggleModal} isOpen={modal} />
     </Box>
   )
 }
