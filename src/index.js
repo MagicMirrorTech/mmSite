@@ -1,19 +1,24 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { hydrate, render } from 'react-dom'
 import Routes from './routes'
 import { ThemeProvider, CSSReset } from '@chakra-ui/core'
 import theme from './theme'
 import * as serviceWorker from './serviceWorker'
 import ContextProvider from './context'
 
-ReactDOM.render(
+const rootElement = document.getElementById('root')
+const App = () => (
   <ThemeProvider theme={theme}>
     <ContextProvider>
       <CSSReset />
       <Routes />
     </ContextProvider>
-  </ThemeProvider>,
-  document.getElementById('root')
+  </ThemeProvider>
 )
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement)
+} else {
+  render(<App />, rootElement)
+}
 
 serviceWorker.unregister()

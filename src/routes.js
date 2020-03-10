@@ -1,13 +1,16 @@
 import React, { useContext } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+
 import Navbar from './components/Navbar'
 import Home from './pages/home'
 import Legal from './pages/legal'
 import Privacy from './pages/privacy'
+
 import CreateValueModal from './components/CreateValueModal'
 import OurMissionModal from './components/OurMissionModal'
-import { Context } from './context'
+
 import useInput from './hooks/useInput'
+import { Context } from './context'
 
 export default () => {
   const { onClose, isOpen, modal, toggleModal } = useContext(Context)
@@ -23,22 +26,27 @@ export default () => {
     onClose()
   }
 
+  const modalProps = {
+    name,
+    email,
+    message,
+    onClose,
+    isOpen,
+    submit
+  }
+
   return (
     <BrowserRouter>
       <Navbar />
-      <CreateValueModal
-        name={name}
-        email={email}
-        message={message}
-        onClose={onClose}
-        isOpen={isOpen}
-        submit={submit}
-      />
+      <CreateValueModal {...modalProps} />
       <OurMissionModal onClose={toggleModal} isOpen={modal} />
       <Switch>
         <Route exact path="/privacy" component={Privacy} />
         <Route exact path="/legal" component={Legal} />
         <Route exact path="/" component={Home} />
+        <Route>
+          <Redirect to="/" />
+        </Route>
       </Switch>
     </BrowserRouter>
   )

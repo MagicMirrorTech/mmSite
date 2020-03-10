@@ -78,6 +78,7 @@ function Link({ href, social }) {
       as="a"
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       backgroundImage={`url(/assets/${social}.png)`}
       mt={social === 'twitter' ? '2px' : 0}
       backgroundSize="contain"

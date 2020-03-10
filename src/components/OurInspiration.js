@@ -16,7 +16,7 @@ export default function OurInspiration() {
       >
         OUR INSPIRATION
       </Heading>
-      <Image zIndex="2" m={3} src="/assets/oi1.png" />
+      <Image zIndex="2" m={3} src="/assets/oi1.png" alt="our_inspiration" />
       <Box
         p={5}
         m={3}
@@ -41,8 +41,8 @@ export default function OurInspiration() {
           easier, everyday, to achieve that success.
         </Text>
       </Box>
-      <Image m={3} src="/assets/oi2.png" />
-      <Image m={3} src="/assets/oi3.png" />
+      <Image alt="people_coding" m={3} src="/assets/oi2.png" />
+      <Image alt="people_talking" m={3} src="/assets/oi3.png" />
     </Flex>
   )
 }

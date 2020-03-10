@@ -11,7 +11,7 @@ function OurWork() {
       align="center"
       justify="space-between"
     >
-      <Image src="/assets/james.png" />
+      <Image alt="james_keck" src="/assets/james.png" />
       <Stack pl={40} spacing={3}>
         <Heading
           mt="-35px"

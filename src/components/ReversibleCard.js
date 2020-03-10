@@ -23,11 +23,12 @@ export default function ReversibleCard(props) {
             <Heading fontSize="1.8rem">{heading2}</Heading>
           </Box>
           <Text fontSize="xl">
-            {content} {blog ? <ContinueReading>CONTINUE READING</ContinueReading> : null}
+            {content}{' '}
+            {blog ? <ContinueReading>CONTINUE READING</ContinueReading> : null}
           </Text>
         </Stack>
       </Box>
-      <Image w="30%" src={image} />
+      <Image alt={heading1} w="30%" src={image} />
     </Flex>
   )
 }

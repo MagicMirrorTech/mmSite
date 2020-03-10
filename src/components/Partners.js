@@ -47,7 +47,7 @@ export default function Partners() {
             align="center"
             wrap="wrap"
           >
-            <Image src={partner.img} mb={10} />
+            <Image alt={partner.field} src={partner.img} mb={10} />
             <Text
               mt={partner.id === 1 ? 10 : 0}
               fontWeight="bold"
