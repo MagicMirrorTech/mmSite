@@ -5,7 +5,7 @@ function AboutUs({ onOpen }) {
   return (
     <Box
       w="100%"
-      h="80vh"
+      minH="80vh"
       display="flex"
       boxSizing="border-box"
       px={24}
@@ -20,12 +20,12 @@ function AboutUs({ onOpen }) {
           be ever in your favor
         </Heading>
         <Text fontSize="xl">
-          Magic Mirror is here to put the odds in your favor. Long gone are the days where competing
-          against big companies felt like a losing battle.
+          Magic Mirror is here to put the odds in your favor. Long gone are the
+          days where competing against big companies felt like a losing battle.
         </Text>
         <Text fontSize="xl">
-          We are a group of highly efficient nerds, bridging the gap between fancy new technology
-          and real revenue gains they promise.
+          We are a group of highly efficient nerds, bridging the gap between
+          fancy new technology and real revenue gains they promise.
         </Text>
         <Button
           boxShadow="sm"
