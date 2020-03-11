@@ -83,6 +83,7 @@ function Link({ href, social }) {
       mt={social === 'twitter' ? '2px' : 0}
       backgroundSize="contain"
       backgroundRepeat="no-repeat"
+      alt={social}
     />
   )
 }

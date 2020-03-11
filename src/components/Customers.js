@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, Heading, Flex, Text, Icon, Button } from '@chakra-ui/core'
+import { Stack, Heading, Flex, Text, IconButton } from '@chakra-ui/core'
 
 const mockData = [
   {
@@ -73,39 +73,32 @@ export default function Customers() {
         ))}
       </Stack>
       <Stack isInline alignSelf="center" spacing={20}>
-        <Button
+        <IconButton
           onClick={() => scrollCarousel(-1)}
           variant="outline"
           borderRadius="50px"
           w="50px"
           h="50px"
           variantColor="mmblue"
-        >
-          <Icon
-            name="chevron-left"
-            size="50px"
-            color="mmblue.500"
-            borderRadius="50px"
-            borderColor="mmblue.500"
-          />
-        </Button>
-
-        <Button
+          aria-label="Scroll Left Carousel"
+          icon="chevron-left"
+          fontSize="50px"
+          color="mmblue.500"
+          borderColor="mmblue.500"
+        />
+        <IconButton
           onClick={() => scrollCarousel(1)}
           variant="outline"
           borderRadius="50px"
           w="50px"
           h="50px"
           variantColor="mmblue"
-        >
-          <Icon
-            name="chevron-right"
-            size="50px"
-            color="mmblue.500"
-            borderRadius="50px"
-            borderColor="mmblue.500"
-          />
-        </Button>
+          aria-label="Scroll Right Carousel"
+          icon="chevron-right"
+          fontSize="50px"
+          color="mmblue.500"
+          borderColor="mmblue.500"
+        />
       </Stack>
     </Stack>
   )

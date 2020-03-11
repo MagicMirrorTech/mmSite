@@ -28,7 +28,7 @@ export default function ReversibleCard(props) {
           </Text>
         </Stack>
       </Box>
-      <Image alt={heading1} w="30%" src={image} />
+      <Image alt={heading1} size="30%" src={image} />
     </Flex>
   )
 }
