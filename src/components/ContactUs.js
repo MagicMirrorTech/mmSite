@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Stack, Text, Heading, Box } from '@chakra-ui/core'
+import { Flex, Stack, Text, Heading, Box, Image } from '@chakra-ui/core'
 
 export default function ContactUs({ onOpen }) {
   return (
@@ -52,38 +52,35 @@ export default function ContactUs({ onOpen }) {
           FOLLOW MM DEVS!
         </Text>
         <Stack isInline>
-          <Link social="facebook" href="https://www.facebook.com/mmdevs" />
-          <Link social="instagram" href="https://www.instagram.com/mm.devs" />
-          <Link
-            social="linkedin"
-            href="https://www.linkedin.com/company/magic-mirror-devs"
-          />
-          <Link social="twitter" href="https://twitter.com/MagicmirrorD" />
-          <Link
-            social="pinterest"
-            href="https://www.pinterest.com.mx/MagicMirror_dev"
-          />
+          <Link href="https://www.facebook.com/mmdevs">
+            <ImageLink image="facebook" />
+          </Link>
+          <Link href="https://www.instagram.com/mm.devs">
+            <ImageLink image="instagram" />
+          </Link>
+          <Link href="https://www.linkedin.com/company/magic-mirror-devs">
+            <ImageLink image="linkedin" />
+          </Link>
+          <Link social="twitter" href="https://twitter.com/MagicmirrorD">
+            <ImageLink image="twitter" />
+          </Link>
+          <Link href="https://www.pinterest.com.mx/MagicMirror_dev">
+            <ImageLink image="pinterest" />
+          </Link>
         </Stack>
       </Stack>
     </Flex>
   )
 }
 
-function Link({ href, social }) {
+function Link({ href, children }) {
   return (
-    <Box
-      mr={5}
-      w="25px"
-      h="25px"
-      as="a"
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      backgroundImage={`url(/assets/${social}.png)`}
-      mt={social === 'twitter' ? '2px' : 0}
-      backgroundSize="contain"
-      backgroundRepeat="no-repeat"
-      alt={social}
-    />
+    <Box mr={5} as="a" href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </Box>
   )
+}
+
+function ImageLink({ image }) {
+  return <Image alt={image} size="25px" src={`/assets/${image}.png`} />
 }
