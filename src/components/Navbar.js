@@ -3,17 +3,24 @@ import theme from '../theme'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Context } from '../context'
+import { Box } from '@chakra-ui/core'
 
-const Nav = styled.nav`
-  width: 100%;
-  height: 10vh;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px 100px;
-  box-sizing: border-box;
-`
+const Nav = ({ children }) => (
+  <Box
+    as="nav"
+    w="100%"
+    h="10vh"
+    display="flex"
+    alignItems="center"
+    justifyContent="space-between"
+    py="50px"
+    px="100px"
+    boxSizing="border-box"
+    backgroundColor="white"
+  >
+    {children}
+  </Box>
+)
 
 const Links = styled.div`
   & * {
@@ -39,19 +46,25 @@ function Navbar() {
 
   return (
     <Nav>
-      <div>
+      <Box>
         <NavLink exact to="/">
           <img {...imageContent} alt="mm_logo" />
         </NavLink>
-      </div>
+      </Box>
       <Links>
         <NavLink exact activeStyle={activeStyle} to="/">
           Home
         </NavLink>
-        <a href="https://mmdevsblog.netlify.com" rel="noopener noreferrer" target="_blank">
+        <a
+          href="https://mmdevsblog.netlify.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Blog
         </a>
-        <span onClick={onOpen}>Contact us</span>
+        <Box as="span" onClick={onOpen}>
+          Contact us
+        </Box>
       </Links>
     </Nav>
   )
