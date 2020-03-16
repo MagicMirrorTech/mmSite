@@ -22,8 +22,8 @@ function Home() {
     <Box boxSizing="border-box">
       <AboutUs onOpen={onOpen} />
       <OurWork />
-      {/* <OurInspiration />
-      <Services />
+      <OurInspiration />
+      {/* <Services />
       <CTACard
         text1="GET THE GAINS!"
         text2="EMPOWER YOUR BUSINESS AND START GROWING IT TODAY!"
