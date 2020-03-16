@@ -22,7 +22,7 @@ function Home() {
     <Box boxSizing="border-box">
       <AboutUs onOpen={onOpen} />
       <OurWork />
-      <OurInspiration />
+      {/* <OurInspiration />
       <Services />
       <CTACard
         text1="GET THE GAINS!"
@@ -42,7 +42,7 @@ function Home() {
         btnVar="mmyellow"
       />
       <ContactUs onOpen={toggleModal} />
-      <Footer />
+      <Footer /> */}
     </Box>
   )
 }
