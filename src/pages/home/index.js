@@ -20,8 +20,8 @@ function Home() {
 
   return (
     <Box boxSizing="border-box">
-      {/* <AboutUs onOpen={onOpen} /> */}
-      {/* <OurWork />
+      <AboutUs onOpen={onOpen} />
+      <OurWork />
       <OurInspiration />
       <Services />
       <CTACard
@@ -42,7 +42,7 @@ function Home() {
         btnVar="mmyellow"
       />
       <ContactUs onOpen={toggleModal} />
-      <Footer /> */}
+      <Footer />
     </Box>
   )
 }
