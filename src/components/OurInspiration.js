@@ -3,7 +3,7 @@ import { Image, Flex, Heading, Box, Text } from '@chakra-ui/core'
 
 export default function OurInspiration() {
   return (
-    <Flex px={[8, 8, 20, 20]} py={[3, 3, 20, 20]} align="center" justify="center" flexWrap="wrap">
+    <Flex px={[8, 8, 20, 20]} py={[0, 0, 20, 20]} align="center" justify="center" flexWrap="wrap">
       <Heading
         as="h2"
         pos="absolute"
@@ -20,7 +20,7 @@ export default function OurInspiration() {
       <Image
         order={['2', '2', 'unset', 'unset']}
         zIndex="2"
-        m={3}
+        m={[10, 5, 0, 0]}
         src="/assets/oi1.png"
         alt="our_inspiration"
       />
@@ -38,16 +38,16 @@ export default function OurInspiration() {
           textAlign={['left', 'left', 'unset', 'unset']}
           px={[0, 0, 5, 5]}
           as="h3"
-          ml={['10%', '10%', 0, 0]}
-          fontSize={['1.5rem', '1.5rem', '2rem', '2rem']}
+          ml={['7%', '7%', 0, 0]}
+          fontSize={['1.4rem', '1.4rem', '2rem', '2rem']}
         >
           OUR INSPIRATION HAS
         </Heading>
         <Heading
           px={[0, 0, 5, 5]}
           as="h3"
-          ml={['10%', '10%', 0, 0]}
-          fontSize={['1.5rem', '1.5rem', '2rem', '2rem']}
+          ml={['7%', '7%', 0, 0]}
+          fontSize={['1.4rem', '1.4rem', '2rem', '2rem']}
           textAlign={['left', 'left', 'unset', 'unset']}
           color="mmblue.500"
           mb={[7, 7, 0, 0]}
@@ -59,7 +59,7 @@ export default function OurInspiration() {
           order="3"
           textAlign={['justify', 'justify', 'unset', 'unset']}
           fontSize={['md', 'md', 'xl', 'xl']}
-          mt={3}
+          my={3}
         >
           We believe that owner-run businesses, dedicated employers - companies that haven’t
           forgotten that values and profit are not mutually exclusive - are the backbone of our

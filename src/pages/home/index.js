@@ -23,7 +23,8 @@ function Home() {
       <AboutUs onOpen={onOpen} />
       <OurWork />
       <OurInspiration />
-      {/* <Services />
+      <Services />
+      {/*
       <CTACard
         text1="GET THE GAINS!"
         text2="EMPOWER YOUR BUSINESS AND START GROWING IT TODAY!"

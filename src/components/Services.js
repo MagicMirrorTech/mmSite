@@ -43,7 +43,7 @@ const services = [
 
 export default function Services() {
   return (
-    <Stack px={24} py={20} spacing={10}>
+    <Stack px={[8, 8, 24, 24]} py={20} spacing={10}>
       <Heading
         mt="-85px"
         as="h2"
@@ -51,10 +51,18 @@ export default function Services() {
         color="mmheading"
         fontSize="hmd"
         fontWeight="semibold"
+        display={['none', 'none', 'none', 'block']}
       >
         SERVICES
       </Heading>
-      <Heading mt="-50px" ml="250px" as="h3" color="mmblue.500">
+      <Heading
+        mt={[0, 0, 0, '-50px']}
+        ml={[0, 0, 0, '250px']}
+        as="h3"
+        color="mmblue.500"
+        fontSize={['1.7rem', '1.7rem', '2rem', '2rem']}
+        alignSelf={['center', 'center', 'center', 'unset']}
+      >
         PASSION LED US HERE
       </Heading>
       {services.map((service, idx) => (

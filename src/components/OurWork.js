@@ -9,11 +9,11 @@ function OurWork() {
       py={12}
       boxSizing="border-box"
       align="center"
-      justify={['center', 'center', 'space-between', 'space-between']}
-      flexWrap={['wrap', 'wrap', 'nowrap', 'nowrap']}
+      justify={['center', 'center', 'center', 'space-between']}
+      flexWrap={['wrap', 'wrap', 'wrap', 'nowrap']}
     >
       <Heading
-        display={['block', 'block', 'none', 'none']}
+        display={['block', 'block', 'block', 'none']}
         mb={5}
         as="h3"
         color="mmblue.500"
@@ -22,7 +22,7 @@ function OurWork() {
         HOW WE GET RESULTS
       </Heading>
       <Image alt="james_keck" src="/assets/james.png" size="50%" />
-      <Stack pl={[0, 0, 40, 40]} spacing={3}>
+      <Stack pl={[0, 0, 0, 40]} spacing={3}>
         <Heading
           mt="-35px"
           as="h2"
@@ -34,10 +34,10 @@ function OurWork() {
         >
           OUR WORK
         </Heading>
-        <Heading as="h3" color="mmblue.500" display={['none', 'none', 'block', 'block']}>
+        <Heading as="h3" color="mmblue.500" display={['none', 'none', 'none', 'block']}>
           HOW WE GET RESULTS
         </Heading>
-        <Text textAlign="justify" mt={[5, 5, 0, 0]} fontSize={['md', 'md', 'lg', 'lg']}>
+        <Text textAlign="justify" mt={[5, 5, 5, 0]} fontSize={['md', 'md', 'lg', 'lg']}>
           Our founder is an economist and psychologist by education, a marketer by trade, and a
           technologist by habit. He has used this confluence to help businesses develop cohesive
           technology strategies, specializing specifically in businesses unfamiliar with the latest
