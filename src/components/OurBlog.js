@@ -25,7 +25,7 @@ const blogEntries = [
 
 export default function OurBlog() {
   return (
-    <Stack textAlign="center" px={24} py={20} spacing={20}>
+    <Stack textAlign="center" px={[8, 8, 24, 24]} py={20} spacing={20}>
       <Heading
         mt="-35px"
         left="10%"
@@ -35,6 +35,7 @@ export default function OurBlog() {
         color="mmheading"
         fontSize="hmd"
         fontWeight="semibold"
+        display={['none', 'none', 'none', 'block']}
       >
         GO CHECK OUR BLOG
       </Heading>
@@ -60,7 +61,7 @@ export default function OurBlog() {
         target="_blank"
         size="lg"
         alignSelf="center"
-        width="25%"
+        width={['75%', '75%', '50%', '25%']}
         backgroundColor="mmblue.500"
         variantColor="mmblue"
         mt={10}

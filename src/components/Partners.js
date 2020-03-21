@@ -18,7 +18,7 @@ const partnersData = [
 
 export default function Partners() {
   return (
-    <Stack textAlign="center" px={24} py={20} spacing={10}>
+    <Stack textAlign="center" px={[0, 0, 24, 24]} py={[10, 10, 20, 20]} spacing={10}>
       <Heading
         mt="-35px"
         ml="45px"
@@ -27,25 +27,32 @@ export default function Partners() {
         color="mmheading"
         fontSize="hmd"
         fontWeight="semibold"
+        display={['none', 'none', 'none', 'block']}
       >
         PARTNERS
       </Heading>
       <Heading as="h3" color="mmblue.500">
         OUR PARTNERS
       </Heading>
-      <Flex p={10} align="center" justify="space-between">
+      <Flex
+        p={10}
+        align="center"
+        justify="space-between"
+        wrap={['wrap', 'wrap', 'wrap', 'no-wrap']}
+      >
         {partnersData.map(partner => (
           <Flex
             key={partner.id}
             p={8}
             shadow="xl"
             bg="white"
-            h="340px"
-            w="400px"
+            minH="340px"
+            w={['100%', '100%', '100%', '40%']}
             direction="column"
             justify="center"
             align="center"
             wrap="wrap"
+            mb={[10, 10, 10, 10]}
           >
             <Image alt={partner.field} src={partner.img} mb={10} />
             <Text
@@ -56,7 +63,7 @@ export default function Partners() {
             >
               {partner.field}
             </Text>
-            <Text fontSize="1.4rem">{partner.description}</Text>
+            <Text fontSize={['1.2rem', '1.2rem', '1.4rem', '1.4rem']}>{partner.description}</Text>
           </Flex>
         ))}
       </Flex>

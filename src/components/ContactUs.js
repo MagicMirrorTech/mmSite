@@ -3,7 +3,7 @@ import { Flex, Stack, Text, Heading, Box, Image } from '@chakra-ui/core'
 
 export default function ContactUs({ onOpen }) {
   return (
-    <Flex w="100%" justify="center" align="center" py={20} px={10}>
+    <Flex w="100%" justify="center" align="center" wrap="wrap" py={20} px={10}>
       <Heading
         left={32}
         as="h2"
@@ -11,6 +11,7 @@ export default function ContactUs({ onOpen }) {
         fontWeight="semibold"
         fontSize="hmd"
         color="mmheading"
+        display={['none', 'none', 'none', 'block']}
       >
         SAY HI!
       </Heading>
@@ -20,38 +21,73 @@ export default function ContactUs({ onOpen }) {
         justify="center"
         spacing={5}
         p={5}
-        w="20%"
+        w={['100%', '100%', '100%', '20%']}
         h="100px"
       >
-        <Heading fontSize="1.9rem" as="h3" color="mmblue.500">
+        <Heading
+          alignSelf={['center', 'center', 'center', 'unset']}
+          fontSize="1.9rem"
+          as="h3"
+          color="mmblue.500"
+        >
           CONTACT US!
         </Heading>
       </Stack>
-      <Stack spacing={5} p={5} w="20%" h="100px">
-        <Text color="mmorange" fontSize="1.3rem" fontWeight="bold">
+      <Stack spacing={5} p={5} w={['100%', '100%', '100%', '20%']} h="100px">
+        <Text
+          alignSelf={['center', 'center', 'center', 'unset']}
+          color="mmorange"
+          fontSize="1.3rem"
+          fontWeight="bold"
+        >
           KNOW OUR MISSION
         </Text>
-        <Text zIndex="99" fontSize="1.3rem" onClick={onOpen} cursor="pointer">
+        <Text
+          alignSelf={['center', 'center', 'center', 'unset']}
+          zIndex="99"
+          fontSize="1.3rem"
+          onClick={onOpen}
+          cursor="pointer"
+        >
           Click here!
         </Text>
       </Stack>
-      <Stack spacing={5} p={5} w="20%" h="100px">
-        <Text color="mmorange" fontSize="1.3rem" fontWeight="bold">
+      <Stack spacing={5} p={5} w={['100%', '100%', '100%', '20%']} h="100px">
+        <Text
+          alignSelf={['center', 'center', 'center', 'unset']}
+          color="mmorange"
+          fontSize="1.3rem"
+          fontWeight="bold"
+        >
           GET A QUOTE NOW!
         </Text>
-        <Text fontSize="1.3rem">partner@magicmirror.dev</Text>
+        <Text alignSelf={['center', 'center', 'center', 'unset']} fontSize="1.3rem">
+          partner@magicmirror.dev
+        </Text>
       </Stack>
-      <Stack spacing={5} p={5} w="20%" h="100px">
-        <Text color="mmorange" fontSize="1.3rem" fontWeight="bold">
+      <Stack spacing={5} p={5} w={['100%', '100%', '100%', '20%']} h="100px">
+        <Text
+          alignSelf={['center', 'center', 'center', 'unset']}
+          color="mmorange"
+          fontSize="1.3rem"
+          fontWeight="bold"
+        >
           JOIN OUR TEAM!
         </Text>
-        <Text fontSize="1.3rem">team@magicmirror.dev</Text>
+        <Text alignSelf={['center', 'center', 'center', 'unset']} fontSize="1.3rem">
+          team@magicmirror.dev
+        </Text>
       </Stack>
-      <Stack spacing={5} p={5} w="20%" h="100px">
-        <Text color="mmorange" fontSize="1.3rem" fontWeight="bold">
+      <Stack spacing={5} p={5} w={['100%', '100%', '100%', '20%']} h="100px">
+        <Text
+          alignSelf={['center', 'center', 'center', 'unset']}
+          color="mmorange"
+          fontSize="1.3rem"
+          fontWeight="bold"
+        >
           FOLLOW MM DEVS!
         </Text>
-        <Stack isInline>
+        <Stack alignSelf={['center', 'center', 'center', 'unset']} isInline>
           <Link href="https://www.facebook.com/mmdevs">
             <ImageLink image="facebook" />
           </Link>

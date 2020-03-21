@@ -7,9 +7,9 @@ export default function CTACard({ text1, text2, btnText, btnBg, btnVar }) {
   return (
     <Stack
       w="100%"
-      px="100px"
-      py="70px"
-      spacing="100px"
+      px={['20px', '20px', '30px', '100px']}
+      py={['50px', '50px', '50px', '70px']}
+      spacing={['50px', '50px', '100px', '100px']}
       boxSizing="border-box"
       direction="column"
       backgroundColor="#3C373E"
@@ -23,17 +23,18 @@ export default function CTACard({ text1, text2, btnText, btnBg, btnVar }) {
         fontSize="hmd"
         color="#FFFFFF"
         opacity="0.14"
+        display={['none', 'none', 'none', 'block']}
       >
         {text1}
       </Heading>
-      <Heading fontSize="2rem" color="white">
+      <Heading fontSize={['1.5rem', '1.5rem', '2rem', '2rem']} color="white">
         {text2}
       </Heading>
       <Button
         onClick={onOpen}
         alignSelf="center"
         size="lg"
-        w="25%"
+        w={['75%', '75%', '50%', '25%']}
         h="4rem"
         backgroundColor={btnBg}
         variantColor={btnVar}

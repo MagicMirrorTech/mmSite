@@ -22,7 +22,7 @@ export default function KnowMore() {
   }
 
   return (
-    <Stack mt={20} px={24} py={10} spacing={20}>
+    <Stack mt={20} px={[5, 5, 5, 24]} py={10} spacing={20}>
       <Heading
         as="h2"
         pos="absolute"
@@ -31,6 +31,7 @@ export default function KnowMore() {
         color="mmheading"
         mt="-70px"
         right={24}
+        display={['none', 'none', 'none', 'block']}
       >
         KNOW MORE
       </Heading>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, Heading, Flex, Text, IconButton } from '@chakra-ui/core'
+import { Stack, Heading, Flex, Text, IconButton, Icon } from '@chakra-ui/core'
 
 const mockData = [
   {
@@ -31,7 +31,12 @@ export default function Customers() {
   }
 
   return (
-    <Stack px="90px" py="150px" spacing={20} textAlign="center">
+    <Stack
+      px={['10px', '10px,', '90px', '90px']}
+      py={['50px', '50px', '50px', '150px']}
+      spacing={[10, 10, 10, 20]}
+      textAlign="center"
+    >
       <Heading
         mt="-35px"
         right="120px"
@@ -41,17 +46,18 @@ export default function Customers() {
         fontSize="hmd"
         opacity="0.14"
         letterSpacing="5px"
+        display={['none', 'none', 'none', 'block']}
       >
         HAPPY CUSTOMERS
       </Heading>
-      <Heading color="mmblue.500">
+      <Heading color="mmblue.500" fontSize={['1.5rem', '1.5rem', '2rem', '2rem']}>
         THIS IS WHAT OUR CUSTOMERS SAY ABOUT US
       </Heading>
       <Stack
         style={{ scrollBehavior: 'smooth' }}
         id="carousel"
-        mt="100px"
-        overflowX="hidden"
+        mt={['25px', '25px', '100px', '100px']}
+        overflowX={['scroll', 'scroll', 'scroll', 'hidden']}
         spacing={10}
         isInline
       >
@@ -59,7 +65,7 @@ export default function Customers() {
           <Flex
             key={article.id}
             p={5}
-            minW="520px"
+            minW={['100%', '100%', '100%', '520px']}
             height="250px"
             textAlign="left"
             align="center"
@@ -68,11 +74,17 @@ export default function Customers() {
             rounded="md"
             borderColor="mmorange"
           >
-            <Text fontSize="1.2rem">{article.text}</Text>
+            <Text fontSize={['1rem', '1rem', '1.2rem', '1.2rem']}>{article.text}</Text>
           </Flex>
         ))}
       </Stack>
-      <Stack isInline alignSelf="center" spacing={20}>
+      <Icon
+        display={['block', 'block', 'block', 'none']}
+        name="dots"
+        size="30px"
+        alignSelf="center"
+      />
+      <Stack display={['none', 'none', 'none', 'block']} isInline alignSelf="center" spacing={20}>
         <IconButton
           onClick={() => scrollCarousel(-1)}
           variant="outline"

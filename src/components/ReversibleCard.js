@@ -1,14 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Stack, Flex, Heading, Box, Text, Image } from '@chakra-ui/core'
 
-const ContinueReading = styled.span`
-  color: #4ca1ff;
-  font-weight: bolder;
-  &:hover {
-    cursor: pointer;
-  }
-`
+const ContinueReading = () => (
+  <Box
+    cursor="pointer"
+    color="#4ca1ff"
+    fontWeight="bolder"
+    as="a"
+    rel="noopener noreferrer"
+    href="https://mmdevsblog.netlify.com/"
+    target="_blank"
+  >
+    CONTINUE READING
+  </Box>
+)
 
 export default function ReversibleCard(props) {
   const { heading1, heading2, c1, content, image, direction, blog } = props
@@ -35,14 +40,14 @@ export default function ReversibleCard(props) {
             textAlign={['justify', 'justify', 'justify', 'unset']}
             fontSize={['lg', 'lg', 'xl', 'xl']}
           >
-            {content} {blog ? <ContinueReading>CONTINUE READING</ContinueReading> : null}
+            {content} {blog ? <ContinueReading /> : null}
           </Text>
         </Stack>
       </Box>
       <Image
-        mx={['25%', '25%', '25%', 0]}
+        mx={[!blog ? '25%' : 0, !blog ? '25%' : 0, !blog ? '25%' : 0, 0]}
         alt={heading1}
-        size={['50%', '50%', '50%', '30%']}
+        size={[blog ? '100%' : '50%', blog ? '100%' : '50%', blog ? '100%' : '50%', '30%']}
         src={image}
       />
     </Flex>

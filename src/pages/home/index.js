@@ -24,7 +24,6 @@ function Home() {
       <OurWork />
       <OurInspiration />
       <Services />
-      {/*
       <CTACard
         text1="GET THE GAINS!"
         text2="EMPOWER YOUR BUSINESS AND START GROWING IT TODAY!"
@@ -32,6 +31,7 @@ function Home() {
         btnBg="mmblue.500"
         btnVar="mmblue"
       />
+
       <Customers />
       <Partners />
       <OurBlog />
@@ -43,7 +43,7 @@ function Home() {
         btnVar="mmyellow"
       />
       <ContactUs onOpen={toggleModal} />
-      <Footer /> */}
+      <Footer />
     </Box>
   )
 }

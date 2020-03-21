@@ -1,17 +1,11 @@
 import React from 'react'
 import { Box, Flex, Icon, Text, Divider, Collapse } from '@chakra-ui/core'
 
-export default function CollapsePoint({
-  show,
-  handleShow,
-  title,
-  content,
-  name
-}) {
+export default function CollapsePoint({ show, handleShow, title, content, name }) {
   return (
     <Box mb={16}>
       <Flex justify="space-between">
-        <Text fontWeight="bold" fontSize="1.5rem">
+        <Text fontWeight="bold" fontSize={['1rem', '1rem', '1.5rem', '1.5rem']}>
           {title.toUpperCase()}
         </Text>
         <Icon

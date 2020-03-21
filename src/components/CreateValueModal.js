@@ -20,25 +20,13 @@ import {
 export default function CreateValueModal(props) {
   const { isOpen, onClose, name, message, email, submit } = props
   return (
-    <Modal
-      blockScrollOnMount={false}
-      isOpen={isOpen}
-      onClose={onClose}
-      isCentered
-      size="lg"
-    >
+    <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} isCentered size="lg">
       <ModalOverlay />
       <ModalContent>
         <ModalHeader></ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Text
-            mb="1rem"
-            textAlign="center"
-            fontWeight="bold"
-            fontSize="1.5rem"
-            color="mmblue.500"
-          >
+          <Text mb="1rem" textAlign="center" fontWeight="bold" fontSize="1.5rem" color="mmblue.500">
             CREATE VALUE!
           </Text>
           <Text mb="2rem" textAlign="center" fontSize="1.2rem">
@@ -63,6 +51,7 @@ export default function CreateValueModal(props) {
                 id="email"
                 placeholder="Write your email here"
                 focusBorderColor="mmblue.500"
+                isRequired
               />
             </FormControl>
             <FormControl>
@@ -73,6 +62,7 @@ export default function CreateValueModal(props) {
                 placeholder="Write your message here"
                 size="lg"
                 resize="none"
+                isRequired
               />
             </FormControl>
           </Stack>

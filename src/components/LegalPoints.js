@@ -4,7 +4,7 @@ import { Stack } from '@chakra-ui/core'
 
 export default function LegalPoints({ legals }) {
   return (
-    <Stack spacing={5} px={32}>
+    <Stack spacing={5} px={[5, 5, 5, 32]}>
       {legals.map(({ title, text }, idx) => (
         <LegalPoint key={idx} title={title} text={text} />
       ))}
