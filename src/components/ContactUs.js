@@ -118,5 +118,5 @@ function Link({ href, children }) {
 }
 
 function ImageLink({ image }) {
-  return <Image alt={image} size="100%" src={`/assets/${image}.png`} />
+  return <Image alt={image} htmlWidth="80%" htmlHeight="80%" src={`/assets/${image}.png`} />
 }
