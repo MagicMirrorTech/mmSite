@@ -19,7 +19,24 @@ export default () => {
   const message = useInput('')
 
   const submit = () => {
-    // values ready for submit to the server in [key].value
+    const data = {
+      name: name.value,
+      email: email.value,
+      text: message.value
+    }
+
+    fetch('/.netlify/functions/mailer', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+      })
+
     name.clean()
     email.clean()
     message.clean()
