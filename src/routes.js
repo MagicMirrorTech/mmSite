@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useToast } from '@chakra-ui/core'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
@@ -13,6 +14,7 @@ import useInput from './hooks/useInput'
 import { Context } from './context'
 
 export default () => {
+  const toast = useToast()
   const { onClose, isOpen, modal, toggleModal } = useContext(Context)
   const name = useInput('')
   const email = useInput('')
@@ -34,7 +36,23 @@ export default () => {
     })
       .then(response => response.json())
       .then(result => {
-        console.log(result)
+        if (result.response.includes('250 Ok')) {
+          toast({
+            title: 'Thank you!',
+            description: 'Your message has been successfully sent. We will contact you very soon!',
+            status: 'success',
+            duration: 5000,
+            isClosable: true
+          })
+        } else {
+          toast({
+            title: 'Ooops!',
+            description: 'Something went wrong, try later.',
+            status: 'error',
+            duration: 5000,
+            isClosable: true
+          })
+        }
       })
 
     name.clean()
