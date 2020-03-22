@@ -54,11 +54,13 @@ export default () => {
           })
         }
       })
+      .finally(() => {
+        onClose()
+      })
 
     name.clean()
     email.clean()
     message.clean()
-    onClose()
   }
 
   const modalProps = {
