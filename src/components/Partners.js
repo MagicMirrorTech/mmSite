@@ -6,13 +6,15 @@ const partnersData = [
     id: 1,
     img: '/assets/srs.png',
     field: 'FINANCIAL ANALYSIS GURUS',
-    description: "30+ years can't be a fluke"
+    description: "30+ years can't be a fluke",
+    link: 'https://srsinterconsulting.com/'
   },
   {
     id: 2,
     img: '/assets/argyle.png',
     field: 'MOBILE & ONLINE PAYMENTS',
-    description: 'Smarter than your payment system'
+    description: 'Smarter than your payment system',
+    link: 'https://argylepay.io/'
   }
 ]
 
@@ -54,6 +56,8 @@ export default function Partners() {
             align="center"
             wrap="wrap"
             mb={[10, 10, 10, 10]}
+            cursor="pointer"
+            onClick={() => window.open(partner.link)}
           >
             <Image alt={partner.field} src={partner.img} mb={10} />
             <Text
