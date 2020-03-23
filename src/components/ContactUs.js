@@ -55,27 +55,32 @@ export default function ContactUs({ onOpen }) {
         </Text>
       </Stack>
       <Stack spacing={5} p={5} w={['100%', '100%', '100%', '20%']} h="100px">
-        <Text
+        <Box
+          as="a"
+          href="mailto:info@magicmirror.dev"
           alignSelf={['center', 'center', 'center', 'unset']}
           color="mmorange"
           fontSize="1.3rem"
           fontWeight="bold"
+          cursor=""
         >
           GET A QUOTE NOW!
-        </Text>
+        </Box>
         <Text alignSelf={['center', 'center', 'center', 'unset']} fontSize="1.3rem">
           partner@magicmirror.dev
         </Text>
       </Stack>
       <Stack spacing={5} p={5} w={['100%', '100%', '100%', '20%']} h="100px">
-        <Text
+        <Box
+          as="a"
+          href="mailto:info@magicmirror.dev"
           alignSelf={['center', 'center', 'center', 'unset']}
           color="mmorange"
           fontSize="1.3rem"
           fontWeight="bold"
         >
           JOIN OUR TEAM!
-        </Text>
+        </Box>
         <Text alignSelf={['center', 'center', 'center', 'unset']} fontSize="1.3rem">
           team@magicmirror.dev
         </Text>
