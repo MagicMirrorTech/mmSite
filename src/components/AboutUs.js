@@ -15,7 +15,7 @@ function AboutUs({ onOpen }) {
       bgPos={['60%', '60%', '', '']}
       bgRepeat="no-repeat"
     >
-      <Stack w={['100%', '100%', '100%', '55%']} spacing={8}>
+      <Stack zIndex="2" w={['100%', '100%', '100%', '55%']} spacing={8}>
         <Heading as="h1" fontSize={['1.7rem', '1.7rem', '3rem', '3rem']} letterSpacing="2px">
           <span style={{ fontWeight: 'lighter' }}>May the odds </span>
           be ever in your favor
@@ -47,6 +47,7 @@ function AboutUs({ onOpen }) {
         as="h2"
         pos="absolute"
         display={['none', 'none', 'none', 'block']}
+        zIndex="1"
         ml="450px"
         mt="100px"
         fontWeight="semibold"

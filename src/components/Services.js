@@ -52,6 +52,7 @@ export default function Services() {
         fontSize="hmd"
         fontWeight="semibold"
         display={['none', 'none', 'none', 'block']}
+        zIndex="2"
       >
         SERVICES
       </Heading>
@@ -62,6 +63,7 @@ export default function Services() {
         color="mmblue.500"
         fontSize={['1.7rem', '1.7rem', '2rem', '2rem']}
         alignSelf={['center', 'center', 'center', 'unset']}
+        zIndex="1"
       >
         PASSION LED US HERE
       </Heading>

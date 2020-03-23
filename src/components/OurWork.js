@@ -26,15 +26,16 @@ function OurWork() {
         <Heading
           mt="-35px"
           as="h2"
+          zIndex="2"
           pos="absolute"
-          display={['none', 'none', 'absolute', 'absolute']}
+          display={['none', 'none', 'none', 'block']}
           fontWeight="semibold"
           fontSize="hmd"
           color="mmheading"
         >
           OUR WORK
         </Heading>
-        <Heading as="h3" color="mmblue.500" display={['none', 'none', 'none', 'block']}>
+        <Heading zIndex="1" as="h3" color="mmblue.500" display={['none', 'none', 'none', 'block']}>
           HOW WE GET RESULTS
         </Heading>
         <Text textAlign="justify" mt={[5, 5, 5, 0]} fontSize={['md', 'md', 'lg', 'lg']}>

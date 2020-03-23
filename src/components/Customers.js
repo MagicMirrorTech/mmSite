@@ -47,10 +47,11 @@ export default function Customers() {
         opacity="0.14"
         letterSpacing="5px"
         display={['none', 'none', 'none', 'block']}
+        zIndex="2"
       >
         HAPPY CUSTOMERS
       </Heading>
-      <Heading color="mmblue.500" fontSize={['1.5rem', '1.5rem', '2rem', '2rem']}>
+      <Heading zIndex="1" color="mmblue.500" fontSize={['1.5rem', '1.5rem', '2rem', '2rem']}>
         THIS IS WHAT OUR CUSTOMERS SAY ABOUT US
       </Heading>
       <Stack

@@ -28,10 +28,11 @@ export default function Partners() {
         fontSize="hmd"
         fontWeight="semibold"
         display={['none', 'none', 'none', 'block']}
+        zIndex="2"
       >
         PARTNERS
       </Heading>
-      <Heading as="h3" color="mmblue.500">
+      <Heading zIndex="1" as="h3" color="mmblue.500">
         OUR PARTNERS
       </Heading>
       <Flex

@@ -24,10 +24,11 @@ export default function CTACard({ text1, text2, btnText, btnBg, btnVar }) {
         color="#FFFFFF"
         opacity="0.14"
         display={['none', 'none', 'none', 'block']}
+        zIndex="2"
       >
         {text1}
       </Heading>
-      <Heading fontSize={['1.5rem', '1.5rem', '2rem', '2rem']} color="white">
+      <Heading zIndex="1" fontSize={['1.5rem', '1.5rem', '2rem', '2rem']} color="white">
         {text2}
       </Heading>
       <Button

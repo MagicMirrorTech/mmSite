@@ -36,10 +36,11 @@ export default function OurBlog() {
         fontSize="hmd"
         fontWeight="semibold"
         display={['none', 'none', 'none', 'block']}
+        zIndex="2"
       >
         GO CHECK OUR BLOG
       </Heading>
-      <Heading as="h3" color="mmblue.500">
+      <Heading zIndex="1" as="h3" color="mmblue.500">
         THESE ARE SOME OF OUR IDEAS
       </Heading>
       {blogEntries.map((entry, idx) => (

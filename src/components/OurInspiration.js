@@ -13,7 +13,7 @@ export default function OurInspiration() {
         fontWeight="semibold"
         fontSize="hmd"
         color="mmheading"
-        display={['none', 'none', 'absolute', 'absolute']}
+        display={['none', 'none', 'none', 'block']}
       >
         OUR INSPIRATION
       </Heading>

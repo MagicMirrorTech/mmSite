@@ -12,6 +12,7 @@ export default function ContactUs({ onOpen }) {
         fontSize="hmd"
         color="mmheading"
         display={['none', 'none', 'none', 'block']}
+        zIndex="2"
       >
         SAY HI!
       </Heading>
@@ -29,6 +30,7 @@ export default function ContactUs({ onOpen }) {
           fontSize="1.9rem"
           as="h3"
           color="mmblue.500"
+          zIndex="1"
         >
           CONTACT US!
         </Heading>
