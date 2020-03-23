@@ -15,6 +15,7 @@ import { Context } from './context'
 
 export default () => {
   const toast = useToast()
+  const badToast = useToast()
   const { onClose, isOpen, modal, toggleModal } = useContext(Context)
   const name = useInput('')
   const email = useInput('')
@@ -45,7 +46,7 @@ export default () => {
             isClosable: true
           })
         } else {
-          toast({
+          badToast({
             title: 'Ooops!',
             description: 'Something went wrong, try later.',
             status: 'error',
