@@ -74,6 +74,9 @@ export default function Customers() {
             borderWidth="2px"
             rounded="md"
             borderColor="mmorange"
+            bgImage="url(/assets/quotes.png)"
+            bgSize="contain"
+            backgroundRepeat="no-repeat"
           >
             <Text fontSize={['1rem', '1rem', '1.2rem', '1.2rem']}>{article.text}</Text>
           </Flex>
