@@ -104,7 +104,7 @@ export default function ContactUs({ onOpen }) {
           <Link href="https://www.linkedin.com/company/magic-mirror-devs">
             <ImageLink image="linkedin" />
           </Link>
-          <Link social="twitter" href="https://twitter.com/MagicmirrorD">
+          <Link social="twitter" href="https://twitter.com/MM_Devs">
             <ImageLink image="twitter" />
           </Link>
           <Link href="https://www.pinterest.com.mx/MagicMirror_dev">
