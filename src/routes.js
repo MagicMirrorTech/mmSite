@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useToast } from '@chakra-ui/core'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
@@ -14,6 +14,7 @@ import useInput from './hooks/useInput'
 import { Context } from './context'
 
 export default () => {
+  const [loading, setLoading] = useState(false)
   const toast = useToast()
   const badToast = useToast()
   const { onClose, isOpen, modal, toggleModal } = useContext(Context)
@@ -22,13 +23,14 @@ export default () => {
   const message = useInput('')
 
   const submit = () => {
+    setLoading(true)
     const data = {
       name: name.value,
       email: email.value,
       text: message.value
     }
 
-    fetch('/.netlify/functions/mailer', {
+    fetch('https://mm-mailing.herokuapp.com/mailing', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -42,7 +44,7 @@ export default () => {
             title: 'Thank you!',
             description: 'Your message has been successfully sent. We will contact you very soon!',
             status: 'success',
-            duration: 5000,
+            duration: 3000,
             isClosable: true
           })
         } else {
@@ -50,18 +52,18 @@ export default () => {
             title: 'Ooops!',
             description: 'Something went wrong, try later.',
             status: 'error',
-            duration: 5000,
+            duration: 3000,
             isClosable: true
           })
         }
       })
       .finally(() => {
+        setLoading(false)
         onClose()
+        name.clean()
+        email.clean()
+        message.clean()
       })
-
-    name.clean()
-    email.clean()
-    message.clean()
   }
 
   const modalProps = {
@@ -70,7 +72,8 @@ export default () => {
     message,
     onClose,
     isOpen,
-    submit
+    submit,
+    loading
   }
 
   return (

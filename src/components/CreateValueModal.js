@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/core'
 
 export default function CreateValueModal(props) {
-  const { isOpen, onClose, name, message, email, submit } = props
+  const { isOpen, onClose, name, message, email, submit, loading } = props
   return (
     <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} isCentered size="lg">
       <ModalOverlay />
@@ -80,6 +80,7 @@ export default function CreateValueModal(props) {
               CANCEL
             </Button>
             <Button
+              isLoading={loading}
               w="40%"
               size="lg"
               variantColor="mmblue"
